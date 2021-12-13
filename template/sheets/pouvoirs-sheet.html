@@ -1,0 +1,24 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <i>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="128" width="128" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+
+        <label>Déscription
+            <textarea name="data.description">{{data.data.description}}</textarea>
+        </label>
+
+        <label>PM
+            <input name="data.pm" type="text" value="{{data.data.pm}}" placeholder=""/>
+        </label>
+
+        <label>Durée
+            <input name="data.duree" type="text" value="{{data.data.duree}}" placeholder=""/>
+        </label>
+        <label>Portée
+            <input name="data.portee" type="text" value="{{data.data.portee}}" placeholder=""/>
+        </label>
+        <label>Sauvegarde
+            <input name="data.sauvegarde" type="text" value="{{data.data.sauvegarde}}" placeholder=""/>
+        </label>
+    </i>
+</form>

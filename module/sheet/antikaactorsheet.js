@@ -39,7 +39,7 @@ export default class antikaActorSheet extends ActorSheet {
                var tab2 = document.getElementById("tab2");
                var tab3 = document.getElementById("tab3");
       
-               competence.addEventListener("click", () =>{
+            competence.addEventListener("click", () =>{
                    if(getComputedStyle(tab1).display != "block"){
                        tab1.style.display = "block";
                        tab2.style.display = "none";
@@ -55,7 +55,7 @@ export default class antikaActorSheet extends ActorSheet {
                    }
                })
 
-               equipement.addEventListener("click", () =>{
+            equipement.addEventListener("click", () =>{
                 if(getComputedStyle(tab2).display != "block"){
                     tab1.style.display = "none";
                     tab2.style.display = "block";

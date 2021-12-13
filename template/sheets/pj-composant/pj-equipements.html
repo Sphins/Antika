@@ -1,5 +1,54 @@
-<div>
-    <p>
-        equipements
-    </p>
-</div>
+<!--tableau arme de contact-->
+<table>
+    <tr><th colspan=5>Arme</th></tr>
+    <tr>
+        <th>Arme</th>
+        <th>Type</th>
+        <th>Dégats</th>
+        <th>PE</th>
+        <th></th>
+    </tr>
+    {{#each actor.data.data.armes as |item key|}}
+    <tr class=item data-item-id={{item._id}}>
+        <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" />{{item.name}}</td>
+        <br/>
+        <td>{{item.data.type}}</td>
+        <td>{{item.data.dégats}}</td>
+        <td>{{item.data.pe}}</td>
+        <td class=inline>
+            <a class="jetdataccac"><i class="fas fa-dice-d20"></i></a>
+            <a class="item-edit"  title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </td>
+
+    </tr>
+    {{/each}}
+</table> 
+
+<table>
+    <tr><th colspan=6>Armure</th></tr>
+    <tr>
+        <th>Armure</th>
+        <th>Type</th>
+        <th>localisation</th>
+        <th>PA</th>
+        <th>PE</th>
+        <th></th>
+    </tr>
+    {{#each actor.data.data.armures as |item key|}}
+    <tr class=item data-item-id={{item._id}}>
+        <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" />{{item.name}}</td>
+        <br/>
+        <td>{{item.data.type}}</td>
+        <td>{{item.data.localisation}}</td>
+        <td>{{item.data.pa}}</td>
+        <td>{{item.data.pe}}</td>
+        <td class=inline>
+            <a class="jetdataccac"><i class="fas fa-dice-d20"></i></a>
+            <a class="item-edit"  title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </td>
+
+    </tr>
+    {{/each}}
+</table> 
