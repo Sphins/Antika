@@ -1,0 +1,23 @@
+{
+    "name": "Antika",
+    "title": "Antika",
+    "description": "Antika pour foundry VTT",
+    "version": "0.03",
+    "minimumCoreVersion": "0.8.9",
+    "compatibleCoreVersion": "0.8.9",
+    "templateVersion": 3,
+    "author": "Sphins (J'peuxpasj'ai JDR!!)",
+    "esmodules": ["module/antika.js"],
+    "styles": ["css/antika.css"],
+    "scripts": [],
+    "packs": [],
+    "languages": [],
+    "gridDistance": 1,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "",
+    "secondaryTokenAttribute": "",
+    "url": "",
+    "manifest": "",
+    "download": "",
+    "license": ""
+}

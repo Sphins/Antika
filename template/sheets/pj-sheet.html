@@ -1,0 +1,93 @@
+<form class="{{cssClass}}" autocomplete="off">
+<body>
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="128" width="128" />
+
+    <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+
+    <div class="defense" >
+        <div class="ligne">
+            <label class="label100" >Age :</label>
+            <input class="champ1" name="data.age" type="number" value="{{data.data.age}}"/>
+            <label class="label100" >Race :</label>
+            <input class="champ2" name="data.race" type="text" value="{{data.data.race}}"/>
+            <label class="label100" >Descendant de :</label>
+            <input class="champ2" name="data.descendant" type="text" value="{{data.data.descendant}}"/>
+        </div>
+        <br/>
+        <div class="ligne">
+            <label class="label100" >Sexe :</label>
+            <input class="champ1" name="data.sexe" type="text" value="{{data.data.sexe}}"/>
+            <label class="label100" >Carrière :</label>
+            <input class="champ2" name="data.carriere" type="text" value="{{data.data.carriere}}"/>
+            <label class="label100" >Originaire de :</label>
+            <input class="champ2" name="data.origine" type="text" value="{{data.data.origine}}"/>
+        </div>
+        <br/>
+        <div class="ligne">
+            <label class="label100" >Taille :</label>
+            <input class="champ1" name="data.taille" type="text" value="{{data.data.taille}}"/>
+            <label class="label100" >Métier :</label>
+            <input class="champ2" name="data.metier" type="text" value="{{data.data.metier}}"/>
+            <label class="label100" >Description :</label>
+            <input class="champ2" name="data.description" type="text" value="{{data.data.description}}"/>
+        </div>
+        <br/>
+        <div class="ligne">
+            <label class="label100" >Poids :</label>
+            <input class="champ1" name="data.poids" type="number" value="{{data.data.poids}}"/>
+            <label class="label100" >Main :</label>
+            <input class="champ1" name="data.main.directrice" type="text" value="{{data.data.main.directrice}}"/>
+            <input class="champ2" name="data.main.description" type="text" value="{{data.data.main.description}}"/>
+        </div>
+        <br/>
+        <div class="ligne">
+            <label class="label100" >Or :</label>
+            <input class="champ1" name="data.or" type="number" value="{{data.data.or}}"/>
+            <label class="label100" >Obelos de fer :</label>
+            <input class="champ1" name="data.of" type="number" value="{{data.data.of}}"/>
+        </div>
+    </div>
+    <div class="defense ligne">
+        <label class="label100" >PV</label>
+        <input class="champ1" name="data.pv.act" type="number" value="{{data.data.pv.act}}"/>
+        <input class="champ1" name="data.pv.max" type="number" value="{{data.data.pv.max}}"/>
+        <label class="label100" >Ubris</label>
+        <input class="champ1" name="data.ubris.act" type="number" value="{{data.data.ubris.act}}"/>
+        <input class="champ1" name="data.ubris.max" type="number" value="{{data.data.ubris.max}}"/>
+        <a class="jetde"><i class="fas fa-dice-d20"></i></a>
+        <label class="label100" >Aristeia</label>
+        <input class="champ1" name="data.aristeia.act" type="number" value="{{data.data.aristeia.act}}"/>
+        <input class="champ1" name="data.aristeia.max" type="number" value="{{data.data.aristeia.max}}"/>
+        <label class="label100" >PC</label>
+        <input class="champ1" name="data.PC.reste" type="number" value="{{data.data.PC.reste}}"/>
+        <input class="champ1" name="data.PC.total" type="number" value="{{data.data.PC.total}}"/>
+    </div>
+
+        <!--menu-->
+        <div class="content flex3">
+            {{!-- Sheet Tab Navigation --}}
+            
+            <button class=champ2 id="competence" style="background:#bfa288;color:#5a2119">Competence</button>
+            <button class=champ2 id="equipement" style="background:#5a2119;color:#bfa288">Equipement</button>
+            <button class=champ2 id="pouvoir" style="background:#5a2119;color:#bfa288">Pouvoir</button>
+
+         
+         
+            {{!-- Sheet Body --}}
+            
+                <div id="tab1" class="tab" style="display:block">
+                    {{>"systems/Antika/template/sheets/pj-composant/pj-capa.html"}}
+                </div>
+
+                <div id="tab2" class="tab" style="display:none">
+                    {{>"systems/Antika/template/sheets/pj-composant/pj-equipements.html"}}
+                </div>
+
+                <div id="tab3" class="tab" style="display:none">
+                    {{>"systems/Antika/template/sheets/pj-composant/pj-pouvoirs.html"}}
+                </div>
+
+    </div>
+</body>
+
+</form>

@@ -1,0 +1,66 @@
+.label100 {
+    display:flexbox;
+    width: 100px;
+    margin: 10PX;
+    max-width: 100px;
+    min-width: 10px
+}
+
+.label200 {
+    display:flexbox;
+    text-align: center;
+    width: 1250px;
+    margin: 10PX;
+}
+
+.label300 {
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+.champ1 {
+    display:flexbox;
+    max-width: 40px;
+    min-width: 10px;
+}
+
+.champ2 {
+    max-width: 150px;
+    min-width: 149px;
+}
+
+
+.champ3 {
+    max-height: 10px;
+}
+
+.defense {
+    border: 5px #bfa288 groove;
+    min-width: 100%;
+    padding: 5px;
+    margin: 5PX;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.comp {
+    border: 5px #bfa288 groove;
+    min-width: 32%;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ligne {
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.colon {
+    min-width: 100%;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

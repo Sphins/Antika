@@ -1,0 +1,95 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <i class="background">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="128" width="128" />
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+
+    <label>Déscription
+        <textarea name="data.description">{{data.data.description}}</textarea>
+    </label>
+
+    <label>Dégats
+        <input name="data.degats" type="text" value="{{data.data.degats}}" placeholder=""/>
+    </label>
+
+    <label>Effects
+        <input name="data.effets" type="text" value="{{data.data.effets}}" placeholder=""/>
+    </label>
+</i>
+</form>
+
+
+
+
+<p>
+    <!---vie-->
+    <p class="Vie">
+        <label>Santé
+    <input name="data.pvactuel" type="text" value="{{data.data.pvactuel}}"/>
+    <input name="data.pvmax" type="text" value="{{data.data.pvmax}}"/>
+</label>
+    </p>
+    <!--background-->
+
+    <P class="background">
+        <label>concept
+        <textarea name="data.concept">{{data.data.concept}}</textarea>
+    </label>
+
+        <label>background
+        <textarea name="data.background">{{data.data.background}}</textarea>
+    </label>
+
+        <label>description
+        <textarea name="data.description">{{data.data.description}}</textarea>
+    </label>
+
+        <label>notes
+        <textarea name="data.notes">{{data.data.notes}}</textarea>
+    </label>
+    </P>
+</p>
+
+<!-- attribut et competence -->
+
+{{#each data.data.attributs as |attribut attnom|}}
+<div class="attributs">
+    <label>{{attnom}}</label>
+    <input name="data.attributs.{{attnom}}.valeur" type="text" value="{{attribut.valeur}}" placeholder="" />
+    <a class="jetdeatt" data-diceatt="{{attribut.valeur}}" data-name={{attnom}}><i class="fas fa-dice-d20"></i></a>
+    <ul>
+        {{#each attribut.competence as |competences cmpnom|}}
+        <li class="competence">
+            <input name="data.attributs.{{attnom}}.competence.{{cmpnom}}.valeur" type="text" value="{{competences.valeur}}" placeholder="" />
+            <a class="jetdecmp" data-diceatt="{{attribut.valeur}}" data-name="{{competences.valeur}}"><i class="fas fa-dice-d20"></i></a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/each}}
+
+
+<!-- arme -->
+
+<table class="tableau">
+    <caption>Arme</caption>
+    <tr>
+        <th></th>
+        <th>Nom</th>
+        <th>Dégâts</th>
+        <th>effets</th>
+        <th></th>
+    </tr>
+    {{#each actor.data.items as |item key|}}
+    <tr class="item" data-item-id="{{item.id}}">
+        <td><img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="32" width="32" /></td>
+        <td>{{item.name}}</td>
+        <td>{{item.data.data.degats}}</td>
+        <td>{{item.data.data.effets}}</td>
+        <td>
+            <a class="jetdedeg" data-dicedeg="{{item.data.data.degats}}" data-name="{{item.name}}" data-effets={{item.data.data.effets}}><i class="fas fa-dice-d20"></i></a>
+            <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </td>
+    </tr>
+    {{/each}}
+</table>
